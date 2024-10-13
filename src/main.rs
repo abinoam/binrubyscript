@@ -20,6 +20,9 @@ pub fn init(interp: &mut Artichoke) -> Result<(), Error> {
     Ok(())
 }
 
-fn main() {
+fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("Hello, world from pure Rust!");
+
+    let mut interp = artichoke::interpreter()?;
+    Ok(())
 }
