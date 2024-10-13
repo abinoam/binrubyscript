@@ -24,5 +24,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("Hello, world from pure Rust!");
 
     let mut interp = artichoke::interpreter()?;
+    init(&mut interp)?;
     Ok(())
 }
