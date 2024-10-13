@@ -1,5 +1,6 @@
 use artichoke::prelude::*;
 use rust_embed::RustEmbed;
+use std::path::Path; // Import Path
 
 // The Ruby source code to be embedded
 #[derive(Debug, Clone, Copy, Hash, PartialEq, Eq, PartialOrd, Ord, RustEmbed)]
@@ -25,5 +26,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut interp = artichoke::interpreter()?;
     init(&mut interp)?;
+
+    // Now load and run the Ruby script
+    match interp.eval_file(Path::new("binrubyscript.rb")) {
+        Ok(_) => (),
+        Err(err) => {
+            eprintln!("Error executing Ruby script: {}", err);
+        }
+    }
+
     Ok(())
 }
