@@ -1,6 +1,7 @@
 use artichoke::prelude::*;
 use rust_embed::RustEmbed;
 use std::path::Path; // Import Path
+use std::process;
 
 // The Ruby source code to be embedded
 #[derive(Debug, Clone, Copy, Hash, PartialEq, Eq, PartialOrd, Ord, RustEmbed)]
@@ -32,6 +33,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         Ok(_) => (),
         Err(err) => {
             eprintln!("Error executing Ruby script: {}", err);
+            process::exit(1); // Exit with code 1
         }
     }
 
