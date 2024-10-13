@@ -4,4 +4,5 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+artichoke = { git = "https://github.com/artichoke/artichoke", version = "0.1.0-pre.0" }
 rust-embed = "8.5.0"
