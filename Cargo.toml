@@ -1,7 +1,15 @@
 [package]
 name = "binrubyscript"
 version = "0.1.0"
+authors = ["Abinoam Praxedes Marques Jr. <abinoam@gmail.com>"]
 edition = "2021"
+description = "A Rust template application that embeds and runs Ruby code using Artichoke."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/abinoa/binrubyscript"
+homepage = "https://github.com/abinoam/binrubyscript"
+readme = "README.md"
+keywords = ["rust", "ruby", "artichoke", "embedding", "scripting"]
+categories = ["development-tools::build-utilities", "embedded"]
 
 [dependencies]
 artichoke = { git = "https://github.com/artichoke/artichoke", version = "0.1.0-pre.0" }
