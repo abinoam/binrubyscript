@@ -24,3 +24,11 @@ cd binrubyscript
 cargo build --release
 cargo run
 ```
+
+## Stay Updated with Artichoke's Single-Binary Efforts
+
+For ongoing developments and discussions about embedding Ruby code into a single binary using Artichoke, you can follow the GitHub issues labeled [A-single-binary](https://github.com/artichoke/artichoke/labels/A-single-binary) in the Artichoke repository:
+
+- **Artichoke GitHub Issues – A-single-binary**: [https://github.com/artichoke/artichoke/labels/A-single-binary](https://github.com/artichoke/artichoke/labels/A-single-binary)
+
+These issues provide insights into the project's progress, challenges, and future plans related to creating single-binary Ruby applications.
